@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans:['var(--font-open)', ...fontFamily.sans]
+        sans:['var(--font-montserrat)', ...fontFamily.sans]
       },
       colors: {
         'accent-1': '#FAFAFA',
