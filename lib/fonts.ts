@@ -1,7 +1,7 @@
 import { Montserrat, Playfair_Display } from "next/font/google";
 
 export const textFont = Montserrat({
-  weight: ['200','400'],
+  weight: ['300','400'],
   subsets: ['latin'],
   variable: '--font-montserrat',
 })
