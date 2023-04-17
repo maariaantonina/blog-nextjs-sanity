@@ -3,6 +3,7 @@
  */
 
 import { visionTool } from '@sanity/vision'
+import StudioLogo from 'components/StudioLogo'
 import StudioNavbar from 'components/StudioNavbar'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
@@ -24,7 +25,7 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  title,
+  title: 'My new blog sanity studio',
   schema: {
     // If you want more content types, you can add them to this array
     types: [authorType, postType, settingsType],
@@ -51,7 +52,7 @@ export default defineConfig({
   ],
   studio: {
     components: {
-      //logo: StudioLogo,
+      logo: StudioLogo,
       navbar: StudioNavbar,
     }
   },
