@@ -4,7 +4,7 @@ const props = {
     "--my-white": "#fff",
     "--my-black": "#1a1a1a",
     "--my-red": "#E07A5F",
-    "--my-blue": "#645e9d",
+    "--my-blue": "#3D405B",
     "--my-green": "#81B29A",
     "--my-yellow": "#F2CC8F",
 };

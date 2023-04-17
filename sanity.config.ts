@@ -3,6 +3,7 @@
  */
 
 import { visionTool } from '@sanity/vision'
+import StudioNavbar from 'components/StudioNavbar'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
 import { productionUrl } from 'plugins/productionUrl'
@@ -48,5 +49,11 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
   ],
+  studio: {
+    components: {
+      //logo: StudioLogo,
+      navbar: StudioNavbar,
+    }
+  },
   theme: myTheme,
 })
