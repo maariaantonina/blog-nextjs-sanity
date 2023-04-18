@@ -1,6 +1,8 @@
 import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
 import {
   indexQuery,
+  type MainPage,
+  mainPageQuery,
   type Post,
   postAndMoreStoriesQuery,
   postBySlugQuery,
@@ -20,6 +22,13 @@ const client = projectId
 export async function getSettings(): Promise<Settings> {
   if (client) {
     return (await client.fetch(settingsQuery)) || {}
+  }
+  return {}
+}
+
+export async function getMainPage(): Promise<MainPage> {
+  if (client) {
+    return (await client.fetch(mainPageQuery)) || {}
   }
   return {}
 }

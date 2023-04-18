@@ -12,6 +12,8 @@ const postFields = groq`
 
 export const settingsQuery = groq`*[_type == "settings"][0]`
 
+export const mainPageQuery = groq`*[_type == "mainpage"][0]`
+
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
@@ -61,4 +63,9 @@ export interface Settings {
   ogImage?: {
     title?: string
   }
+}
+
+export interface MainPage {
+  title?: string
+  subtitle?: string
 }
