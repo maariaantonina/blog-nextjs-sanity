@@ -33,12 +33,13 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: settingsStructure(settingsType),
+      structure: settingsStructure(mainpageType),
       // `defaultDocumentNode` is responsible for adding a “Preview” tab to the document pane
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
     settingsPlugin({ type: settingsType.name }),
+    settingsPlugin({type: mainpageType.name}),
     // Add the "Open preview" action
     productionUrl({
       apiVersion,
