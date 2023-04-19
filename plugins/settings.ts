@@ -41,7 +41,7 @@ export const settingsStructure = (
     for (let typeDef of typeDefs){
       const singletonListItem = // A singleton not using `documentListItem`, eg no built-in preview
         S.listItem()
-          .title(typeDef.title)
+          .title(typeDef.title !== undefined ? typeDef.title : '')
           .icon(typeDef.icon)
           .child(
             S.editor()
@@ -51,7 +51,6 @@ export const settingsStructure = (
           )
       singletonsList.push(singletonListItem);
     }
-
 
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(

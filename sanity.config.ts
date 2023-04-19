@@ -24,8 +24,8 @@ const title =
 
 export default defineConfig({
   basePath: '/studio',
-  projectId,
-  dataset,
+  projectId : projectId || '',
+  dataset: dataset || '',
   title: 'My new blog sanity studio',
   schema: {
     // If you want more content types, you can add them to this array
