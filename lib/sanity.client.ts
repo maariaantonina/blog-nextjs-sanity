@@ -26,7 +26,7 @@ export async function getSettings(): Promise<Settings> {
   return {}
 }
 
-export async function getMainPage(): Promise<MainPage> {
+export async function getMainPageData(): Promise<MainPage> {
   if (client) {
     return (await client.fetch(mainPageQuery)) || {}
   }
@@ -58,7 +58,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 export async function getPostAndMoreStories(
   slug: string,
   token?: string | null
-): Promise<{ post: Post; morePosts: Post[] }> {
+): Promise<{ post: Post | null; morePosts: Post[] }> {
   if (projectId) {
     const client = createClient({
       projectId,

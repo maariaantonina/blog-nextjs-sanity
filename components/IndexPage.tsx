@@ -6,13 +6,16 @@ import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
 import IntroTemplate from 'intro-template'
 import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
+import type { MainPage, Post, Settings } from 'lib/sanity.queries'
+
+import Hero from './Hero'
 
 export interface IndexPageProps {
   preview?: boolean
   loading?: boolean
   posts: Post[]
   settings: Settings
+  mainPageData?: MainPage
 }
 
 export default function IndexPage(props: IndexPageProps) {
@@ -24,8 +27,9 @@ export default function IndexPage(props: IndexPageProps) {
     <>
       <IndexPageHead settings={settings} />
 
-      <Layout preview={preview} loading={loading}>
+      <Layout preview={preview || false} loading={loading}>
         <Container>
+          <Hero></Hero>
           <BlogHeader title={title} description={description} level={1} />
           {heroPost && (
             <HeroPost
