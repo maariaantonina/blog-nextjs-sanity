@@ -5,6 +5,7 @@ export default function Hero(props: Pick<MainPage, 'title' | 'subtitle'>) {
     return(
         <section>
             {title}
+            {subtitle}
         </section>
     )
 }

@@ -55,3 +55,8 @@ export const description = [
 ]
 
 export const ogImageTitle = 'A Next.js Blog with a Native Authoring Experience'
+
+export const mainPage = {
+  title: 'Protect your data.',
+  subtitle: 'Ensure your business is compliant with RODO regulations today.'
+}

@@ -30,7 +30,7 @@ export default function Page(props: PageProps) {
     return (
       <PreviewSuspense
         fallback={
-          <IndexPage loading preview posts={posts} settings={settings} />
+          <IndexPage loading preview posts={posts} settings={settings} mainPageData={mainPageData}/>
         }
       >
         <PreviewIndexPage token={token} />
